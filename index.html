@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>ITE222|Bootstrap x JavaScript</title>
+</head>
+
+<!--Fname.Mname.Lname.Address. Brgy.City.Country.Province.Zip.Mobile-->
+
+<body >
+    <div class="container">
+
+
+        <form id="form" class="form">
+            <div class="col text-end" id="topbut">
+                <button type="submit" class="btn btn-primary btn-sm">Register</button>
+                <button type="reset" class="btn btn-secondary btn-sm">Cancel</button>
+            </div>
+
+            <div class="col-6" id="left">
+
+                <div class="form-control">
+                    <label for="memcode" class="col-sm-3 form-label">Member Code</label>
+                    <input type="text" class="form-control-sm" placeholder="" id="memcode">
+                    <small>Error</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="dob" class="col-sm-4 form-label">Birthdates (DOB)</label>
+                    <input type="date" class="form-control-sm" placeholder="" id="dob">
+                    <small>Error</small>
+                </div>
+
+                <div class="col-11 my-3 text-end" id="verify">
+                    <button type="button" onclick="validateMember()" class="btn btn-primary btn-sm">Verify</button>
+                    <button type="button" onclick="cancelmember()" class="btn btn-secondary btn-sm">Cancel</button>
+                </div>
+
+                <div class="form-control my-5">
+                    <label for="company" class="col-sm-3 form-label">Company</label>
+                    <input type="text" placeholder="" id="company">
+                </div>
+
+                <div class="form-control">
+                    <label for="fname" class="col-sm-3 form-label">First Name</label>
+                    <input type="text" placeholder="" id="fname">
+                    <small> </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="mname" class="col-sm-3 form-label">Middle Name</label>
+                    <input type="text" id="mname">
+
+                </div>
+
+                <div class="form-control">
+                    <label for="lname" class="col-sm-3 form-label">Last Name</label>
+                    <input type="text" placeholder="" id="lname">
+                    <small> </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="address" class="col-sm-3 form-label">Address</label>
+                    <input type="text" placeholder="" id="address">
+
+
+                    <div class="col">
+                        <label for="address2" class="col-sm-3 form-label"></label>
+                        <input type="text" placeholder="" id="address2">
+                    </div>
+                    <small>Error</small>
+                </div>
+
+                <div class="form-control">
+                    <label for="brgy" class="col-sm-3 form-label">Barangay</label>
+                    <input type="text" placeholder="" id="brgy">
+                </div>
+
+                <div class="form-control">
+                    <label for="city" class="col-sm-3 form-label">City</label>
+                    <input type="text" placeholder="" id="city">
+                    <small> Error </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="country" class="col-sm-3 form-label">Country</label>
+                    <select class="col-sm-7" id="country" aria-label="Choose Country" required>
+                        <option selected></option>
+                        <option value="1">China</option>
+                        <option value="2">Africa</option>
+                        <option value="2">Philippines</option>
+                    </select>
+
+                </div>
+
+                <div class="form-control">
+                    <label for="province" class="col-sm-3 form-label">Province</label>
+                    <input type="text" placeholder="" id="province">
+                </div>
+
+                <div class="form-control" id="treport">
+                    <label for="zip" class="col-sm-3 form-label">Zip/Post Code</label>
+                    <input type="number" placeholder="" id="zip">
+                </div>
+
+                <div class="form-control">
+                    <label for="mobile" class="col-sm-3  form-label">Mobile<br> Phone</label>
+                    <input type="number" class="cform-control" id="mobile">
+                    <small> Error </small>
+                </div>
+            </div>
+
+            <div class=" col-6" id="right">
+
+                <div class="form-control">
+                    <label for="uname" class="col-sm-3 form-label">Username</label>
+                    <input type="text" class="form-control-sm" placeholder="" id="uname">
+                    <small> Error </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="username" class="col-sm-3 form-label">Email</label>
+                    <input type="email" class="form-control-sm" placeholder="asd@123zxc.com" id="email">
+                    <small> Error </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="password" class="col-sm-3 form-label">Password</label>
+                    <input type="password" class="form-control-sm" placeholder="Password" id="password">
+                    <small> Error </small>
+                    <label for="strmsg"></label> <!-- password str checker starts here-->
+                    <p id="strmsg"> </p>
+
+                    <div class="power-container">
+                        <div id="power-point"></div>
+                    </div>
+                </div>
+
+                <div class="form-check" id="checkpass">
+                    <small class="text-muted">Min 8 chars: UPPER, lower, numbers, and !@#$% only</small>
+                    <br>
+
+                    <input class="form-check-input" type="checkbox" onclick="showPassword()" value="" id="showpass">
+                    <label class="form-check-label" for="showpass">
+                        <small>Show Password</small>
+                    </label>
+                </div>
+
+
+                <div class="form-control">
+                    <label for="bsex" class="col-sm-3 form-label">Birth Sex</label>
+                    <input type="text" id="bsex" class="form-control-sm">
+                    <small> Error </small>
+                </div>
+
+                <div class="form-control">
+                    <label for="status" class="col-sm-3 form-label">Marital Status</label>
+                    <input type="text" id="status" class="form-control-sm">
+
+                </div>
+                <div class="row my-3">
+
+                    <div class="col-3 text-end ">
+                        <label for="pwdcheck" class="form-check-label">Person with Disability</label>
+
+                    </div>
+
+                    <div class="col-9">
+                        <input type="checkbox" class="form-check-input" id="pwdcheck">
+                        <small class="text-muted">Avail Senior Citizen and PWD discounts, please upload the appropriate
+                            ID in your health</small>
+
+                    </div>
+                </div>
+
+                <select class="form-select-sm bg-danger-subtle" id="fenk" aria-label="Disabled select" disabled>
+                    <option selected>Guardian information if under care or under 18 years of age</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

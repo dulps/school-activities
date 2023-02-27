@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+body {
+    background-color: #89838c;
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 80%;
+    max-width: 100%;
+}
+
+.form {
+
+    display: flex;
+    padding-top: 10%;
+}
+
+.form-control {
+    display: relative;
+    border: none;
+}
+
+.form-control label {
+    display: inline-block;
+    font-size: small;
+    text-align: end;
+    font-weight: 600;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control input {
+    display: inline-block;
+    font-size: smaller;
+    background-color: #f8f7f7;
+    border: 2px solid rgb(214, 206, 206);
+    border-radius: 4px;
+    width: 70%;
+}
+
+.form-control small {
+    color: red;
+    display: block;
+    padding-left: 25%;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+
+.form-control .power-container {
+    background-color: #f8f7f7;
+    width: 30%;
+    height: 25px;
+    margin-left: 25%;
+    background-color: #f8f7f7;
+    border: 2px solid rgb(214, 206, 206);
+    border-radius: 4px;
+
+}
+
+.form-control .power-container #power-point {
+    background-color: #D73F40;
+    width: 1%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#topbut {
+    position: absolute;
+    padding-right: 10%;
+    right: 0;
+    top: 0;
+}
+
+#zip {
+    width: 50%;
+}
+
+#mobile {
+    width: 50%;
+
+}
+
+#dob {
+    width: 45%;
+}
+
+#strmsg {
+    margin-left: 25%;
+
+}
+
+#checkpass {
+    margin-left: 25%;
+}
+
+.row {
+    font-size: 13px;
+    font-weight: bold;
+
+
+}
+
+#fenk {
+    color: black;
+    margin-left: 11%;
+
+}
