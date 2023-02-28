@@ -145,7 +145,7 @@ password.oninput = function () {
 	let passwordmsg = ['Weak', 'Good', 'Moderate', 'Strong', 'Very Strong'];
 	let colorPower = ['#D13F40', '#DC6551', '#F2B84F', '#BDE952', '#00FF00'];
 
-/*it will start checking if >=6 and each time an array value is found the point is added */
+/*it will start checking inputvalue @6 chars and each time an arrayTest value is found the point var increment */
 	if (value.length >= 6) {
 		let arrayTest = [
 			/[0-9]/,
@@ -180,9 +180,9 @@ function showPassword() {
 	}
 }
 
-/*1.upon load all input fields are disabled except the member code field
-2.fields to be disabled are stored in a variable array
-3.a loop is being run here to check
+//upon load all input fields are disabled except the member code field remove the multiline comment tag to enable this function
+
+/*
 window.onload = function () {
 	var fieldsToDisable =
 		['company','dob', 'fname', 'mname', 'lname', 'address','address2', 'brgy',
@@ -201,6 +201,8 @@ window.onload = function () {
 }
 */
 
+// this function clears all the input field and change its bg color to dirty white and disable fields
+// formfields const contains all the fields to be disabled
 function cancelmember() {
 
 	const formFields = [
@@ -219,6 +221,8 @@ function cancelmember() {
 }
 
 /* act 3 validate function */
+// if input value in membercode field matches the value in memberlist array it will prefill values to fields and disable
+// it else if no input value on member code field matches none it will display an alert msg that no record is found
 function validateMember() {
 
     var memberCode = document.getElementById("memcode").value;
