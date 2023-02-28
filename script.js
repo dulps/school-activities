@@ -23,7 +23,7 @@ form.addEventListener('submit', e => {  // prevent default and will call the che
  2.check each field's value if blank it will call the  error function and change border color to red else will call the success function
  3.trim to remove the whitespaces*/
 function checkInputs() {
-	// trim to remove the whitespaces
+	
 	const memcodeVal = memcode.value.trim();
 	const fnameVal = fname.value.trim();
 	const lnameVal = lname.value.trim();
